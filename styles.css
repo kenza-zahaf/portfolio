@@ -1,0 +1,145 @@
+/* Reset des styles par défaut */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Couleurs et polices */
+:root {
+    --primary-color: #e76f51; /* Rouge chaud */
+    --secondary-color: #f4a261; /* Orange doré */
+    --background-color: #2a9d8f; /* Bleu-vert apaisant */
+    --text-color: #fff; /* Texte blanc */
+    --highlight-color: #264653; /* Couleur complémentaire foncée */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header avec effet de fond */
+header {
+    position: relative;
+    background: url('images/motif-berbere.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Ombre pour mieux voir le texte */
+    padding: 50px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header h1 span {
+    color: var(--primary-color);
+}
+
+header p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+header .btn {
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Section à propos */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Section projets */
+#projects .container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: var(--highlight-color);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 45%;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.project p {
+    font-size: 1rem;
+    color: #f4f4f4;
+}
+
+.project a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Section compétences */
+#skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#skills li {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 10px 0;
+}
+
+/* Section contact */
+#contact {
+    background-color: var(--primary-color);
+    padding: 50px 0;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: var(--highlight-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Effet hover pour les boutons */
+.btn:hover, .project a:hover {
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
