@@ -143,3 +143,15 @@ footer {
     background-color: var(--primary-color);
     transition: background-color 0.3s ease;
 }
+/* Initialisation de l'animation */
+.animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Classe d'animation qui apparaît lorsque l'élément devient visible */
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}

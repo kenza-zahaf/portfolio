@@ -20,7 +20,7 @@
         </article>
     </header>²
     <!-- À propos -->
-    <section id="about">
+    <section id="about" class="animate">
         <article class="container">
             <h2>À propos de moi</h2>
             <p>Je suis une étudinate en première année d'informatique qui aimerait se spécialiser dans la cybersecurité. Je combine passion pour la technologie et amour de l'art pour créer des expériences uniques. Je suis aussi a la recherche d'une alternanace en cybersecurité pour une durée de 2 ans .</p>
@@ -28,14 +28,14 @@
     </section>
 
     <!-- Projets -->
-    <section id="projects">
+    <section id="projects" class="animate">
         <article class="container">
             <h2>Mes projets</h2>
-            <article class="project">
+            <article class="project"class="animate">
                 <h3>Projet 1</h3>
                 <p>nous avons fait un projet de groupe qui etait de crée un fan site pour des célébrité et les mettre en commun sur un seul et meme site. <a href="file:///C:/Users/kenza/OneDrive/Bureau/projet/SiteFans/index.html">Voir le projet</a></p>
             </article>
-            <article class="project">
+            <article class="project"class="animate">
                 <h3>Projet 2</h3>
                 <p>Un autre projet qui montre la machine virtuelle que nous avons créé en groupe aussi, nous avons installer deux systeme d'exploitations: windows 11 et debian. <a href="https://docs.google.com/presentation/d/14vqEfRQDhpG7Ge_jwxLsGGao0I9VSxAwMkx5D13YCh4/edit?usp=sharing">Voir le projet</a></p>
             </article>
@@ -69,6 +69,34 @@
             <p>&copy; 2024 ZAHAF KENZA. Tous droits réservés.</p>
         </div>
     </footer>
-
+    <script>
+        // Fonction pour vérifier la visibilité des éléments
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    
+        // Fonction pour ajouter une classe d'animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate'); // Sélectionne tous les éléments avec la classe .animate
+            elements.forEach(el => {
+                if (isElementInViewport(el)) {
+                    el.classList.add('fade-in'); // Ajoute une classe fade-in lorsqu'il est visible
+                }
+            });
+        }
+    
+        // Écoute l'événement de défilement
+        window.addEventListener('scroll', animateOnScroll);
+    
+        // Applique immédiatement l'animation aux éléments visibles au chargement de la page
+        document.addEventListener('DOMContentLoaded', animateOnScroll);
+    </script>
+    
 </body>
 </html>
